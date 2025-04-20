@@ -1,12 +1,14 @@
-const mongoose = require("mongoose");
-
+const express = require('express');
+const mongoose = require('mongoose');
+const cors = require('cors');
+require('dotenv').config();
 const nodemailer = require("nodemailer");
 
 const transporter = nodemailer.createTransport({
-  service: "gmail",
+  service: 'gmail',
   auth: {
-    user: "srk.2k.1.01@gmail.com",
-    pass: "idsnieqnkwgxakpr", // Not your actual password
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS,
   },
 });
 
@@ -25,7 +27,7 @@ const enquirySchema = new mongoose.Schema({
 
 
 
-mongoose.connect("mongodb+srv://dbUser:Password123@cluster0.sgqfe.mongodb.net/", {
+mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
