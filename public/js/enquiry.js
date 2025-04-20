@@ -13,10 +13,10 @@ document.addEventListener("DOMContentLoaded", function () {
   
         try {
           const baseURL = window.location.hostname.includes("localhost")
-          ? "http://localhost:5000"
-          : "https://mahavir-agro-agency.vercel.app"; // ← Replace with actual backend URL
+          ? "http://localhost:5000/submit-enquiry"
+          : "https://mahavir-agro-agency.onrender.com/submit-enquiry"; // ← Replace with actual backend URL
         
-        const res = await fetch(`${baseURL}/submit-enquiry`, {
+        const res = await fetch(`${baseURL}`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ name, email, message }),
