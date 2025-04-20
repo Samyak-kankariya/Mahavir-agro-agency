@@ -1,12 +1,9 @@
-
 document.addEventListener("DOMContentLoaded", function () {
-const toggleBtn = document.querySelector(".menu-toggle");
-const navMenu = document.querySelector(".nav-menu");
-
-toggleBtn?.addEventListener("click", () => {
-navMenu.classList.toggle("active");
-});
-});
+    const toggleBtn = document.querySelector(".menu-toggle");
+    const navMenu = document.querySelector(".nav-menu");
+  
+    toggleBtn?.addEventListener("click", () => navMenu.classList.toggle("active"));
+  }); 
 
 let lastScrollTop = 0;
 const header = document.querySelector('.site-header');
