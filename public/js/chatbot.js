@@ -1,8 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Dynamically detect API URL
     const baseURL = location.hostname === "localhost"
-    ? "http://127.0.0.1:5000/chat" : "https://mahavir-agro-agency-chatbot.onrender.com"; // Replace with your actual Render URL
- // replace with your actual Render URL
+    ? "http://127.0.0.1:5000/chat" : "https://mahavir-agro-agency-chatbot.onrender.com/chat";
 
     const chatBtn = document.createElement("button");
     chatBtn.innerText = "Chat with us";
@@ -32,11 +31,12 @@ document.addEventListener("DOMContentLoaded", function () {
         input.value = "";
 
         try {
-            const res = await fetch(`${apiBaseUrl}/chat`, {
+            const res = await fetch(baseURL, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ message: userMessage }),
             });
+            
 
             const data = await res.json();
             chatMessages.innerHTML += `<div class="bot-message">${data.response}</div>`;
