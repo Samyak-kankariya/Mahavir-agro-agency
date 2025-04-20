@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Dynamically detect API URL
-    const apiBaseUrl = window.location.hostname === "localhost" 
-        ? "http://127.0.0.1:5000" 
-        : "https://your-render-service.onrender.com"; // replace with your actual Render URL
+    const baseURL = location.hostname === "localhost"
+    ? "http://127.0.0.1:5000/chat" : "https://mahavir-agro-agency-chatbot.onrender.com"; // Replace with your actual Render URL
+ // replace with your actual Render URL
 
     const chatBtn = document.createElement("button");
     chatBtn.innerText = "Chat with us";
