@@ -1,4 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
+    // Dynamically detect API URL
+    const apiBaseUrl = window.location.hostname === "localhost" 
+        ? "http://127.0.0.1:5000" 
+        : "https://your-render-service.onrender.com"; // replace with your actual Render URL
+
     const chatBtn = document.createElement("button");
     chatBtn.innerText = "Chat with us";
     chatBtn.classList.add("chat-btn");
@@ -27,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
         input.value = "";
 
         try {
-            const res = await fetch("http://127.0.0.1:5000/chat", {
+            const res = await fetch(`${apiBaseUrl}/chat`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ message: userMessage }),
