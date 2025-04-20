@@ -12,7 +12,11 @@ document.addEventListener("DOMContentLoaded", function () {
         const message = document.getElementById("message").value;
   
         try {
-          const res = await fetch("http://localhost:5000/submit-enquiry", {
+          const baseURL = window.location.hostname.includes("localhost")
+          ? "http://localhost:5000"
+          : "https://mahavir-agro-agency.vercel.app"; // ← Replace with actual backend URL
+        
+        const res = await fetch(`${baseURL}/submit-enquiry`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ name, email, message }),
