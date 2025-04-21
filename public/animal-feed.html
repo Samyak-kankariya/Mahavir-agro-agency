@@ -48,67 +48,97 @@
     </div>
   </header>
 
-  <!-- Cow Products -->
   <main class="products-page">
     <h1>Animal Feed</h1>
     <p>Explore our range of premium products designed to enhance the health, nutrition, and productivity of cows.</p>
+  
     <div class="products-container">
       <!-- Product 1 -->
-      <div class="product-card">
-        <img <img src="assets/images/animal feed product 1.png" alt="Cattle Feed">
+      <div class="product-card"
+           data-image="assets/images/animal feed product 1.png"
+           data-name="Cattle Feed"
+           data-description="High-quality cattle feed enriched with essential nutrients to improve milk yield and overall health."
+           data-content="This feed supports overall health and boosts milk yield, enriched with vitamins and minerals."
+           data-price="₹450 / 25kg">
+        <img src="assets/images/animal feed product 1.png" alt="Cattle Feed">
         <h2>Cattle Feed</h2>
         <p>High-quality cattle feed enriched with essential nutrients to improve milk yield and overall health.</p>
       </div>
+  
       <!-- Product 2 -->
-      <div class="product-card">
-        <img src="assets/images/animal feed product 2.png" alt="alt=" Cattle Feed">
+      <div class="product-card"
+           data-image="assets/images/animal feed product 2.png"
+           data-name="Mineral Mixture"
+           data-description="A balanced mineral supplement that boosts immunity, fertility, and productivity in cows."
+           data-content="Mineral Mixture helps in enhancing immunity and reproductive health of cows, ensuring better fertility."
+           data-price="₹300 / 10kg">
+        <img src="assets/images/animal feed product 2.png" alt="Mineral Mixture">
         <h2>Mineral Mixture</h2>
         <p>A balanced mineral supplement that boosts immunity, fertility, and productivity in cows.</p>
       </div>
+  
       <!-- Product 3 -->
-      <div class="product-card">
-        <img <img src="assets/images/animal feed product 3.png" alt="Cattle Feed">
+      <div class="product-card"
+           data-image="assets/images/animal feed product 3.png"
+           data-name="Milk Production Enhancer"
+           data-description="A milk production enhancer containing natural ingredients to support lactating cows and improve milk quality."
+           data-content="This product supports increased milk yield and improves the quality of milk, ensuring better results for dairy farmers."
+           data-price="₹500 / 5kg">
+        <img src="assets/images/animal feed product 3.png" alt="Milk Production Enhancer">
         <h2>Milk Production Enhancer</h2>
-        <p>A milk production enhancer containing natural ingredients to support lactating cows and improve milk quality.
-        </p>
+        <p>A milk production enhancer containing natural ingredients to support lactating cows and improve milk quality.</p>
       </div>
-      <!-- Product 1 -->
-      <div class="product-card">
-        <img <img src="assets/images/animal feed product 1.png" alt="Cattle Feed">
+  
+      <!-- Repeat Products as needed -->
+  
+      <!-- Product 4 -->
+      <div class="product-card"
+           data-image="assets/images/animal feed product 1.png"
+           data-name="Cattle Feed"
+           data-description="High-quality cattle feed enriched with essential nutrients to improve milk yield and overall health."
+           data-content="This feed supports overall health and boosts milk yield, enriched with vitamins and minerals."
+           data-price="₹450 / 25kg">
+        <img src="assets/images/animal feed product 1.png" alt="Cattle Feed">
         <h2>Cattle Feed</h2>
         <p>High-quality cattle feed enriched with essential nutrients to improve milk yield and overall health.</p>
       </div>
-      <!-- Product 2 -->
-      <div class="product-card">
-        <img src="assets/images/animal feed product 2.png" alt="alt=" Cattle Feed">
+  
+      <!-- Product 5 -->
+      <div class="product-card"
+           data-image="assets/images/animal feed product 2.png"
+           data-name="Mineral Mixture"
+           data-description="A balanced mineral supplement that boosts immunity, fertility, and productivity in cows."
+           data-content="Mineral Mixture helps in enhancing immunity and reproductive health of cows, ensuring better fertility."
+           data-price="₹300 / 10kg">
+        <img src="assets/images/animal feed product 2.png" alt="Mineral Mixture">
         <h2>Mineral Mixture</h2>
         <p>A balanced mineral supplement that boosts immunity, fertility, and productivity in cows.</p>
       </div>
-      <!-- Product 3 -->
-      <div class="product-card">
-        <img <img src="assets/images/animal feed product 3.png" alt="Cattle Feed">
+  
+      <!-- Product 6 -->
+      <div class="product-card"
+           data-image="assets/images/animal feed product 3.png"
+           data-name="Milk Production Enhancer"
+           data-description="A milk production enhancer containing natural ingredients to support lactating cows and improve milk quality."
+           data-content="This product supports increased milk yield and improves the quality of milk, ensuring better results for dairy farmers."
+           data-price="₹500 / 5kg">
+        <img src="assets/images/animal feed product 3.png" alt="Milk Production Enhancer">
         <h2>Milk Production Enhancer</h2>
-        <p>A milk production enhancer containing natural ingredients to support lactating cows and improve milk quality.
-        </p>
+        <p>A milk production enhancer containing natural ingredients to support lactating cows and improve milk quality.</p>
       </div>
-      <!-- Product 1 -->
-      <div class="product-card">
-        <img <img src="assets/images/animal feed product 1.png" alt="Cattle Feed">
-        <h2>Cattle Feed</h2>
-        <p>High-quality cattle feed enriched with essential nutrients to improve milk yield and overall health.</p>
-      </div>
-      <!-- Product 2 -->
-      <div class="product-card">
-        <img src="assets/images/animal feed product 2.png" alt="alt=" Cattle Feed">
-        <h2>Mineral Mixture</h2>
-        <p>A balanced mineral supplement that boosts immunity, fertility, and productivity in cows.</p>
-      </div>
-      <!-- Product 3 -->
-      <div class="product-card">
-        <img <img src="assets/images/animal feed product 3.png" alt="Cattle Feed">
-        <h2>Milk Production Enhancer</h2>
-        <p>A milk production enhancer containing natural ingredients to support lactating cows and improve milk quality.
-        </p>
+    </div>
+
+    <!-- Hover Preview -->
+    <div id="preview-overlay" class="product-preview-overlay">
+      <div id="preview" class="product-preview-content">
+        <span id="preview-close" class="close-preview">&times;</span>
+        <img id="preview-img" src="" alt="Product Image" />
+        <div class="preview-details">
+          <h2 id="preview-name"></h2>
+          <p id="preview-description"></p>
+          <p><strong>Content:</strong> <span id="preview-content"></span></p>
+          <p><strong>Price:</strong> ₹<span id="preview-price"></span></p>
+        </div>
       </div>
     </div>
   </main>

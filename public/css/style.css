@@ -1094,54 +1094,77 @@ body {
   font-size: 20px;
 }
 
-.product-gallery {
-  max-width: 500px;
-  position: relative;
-  margin-bottom: 20px;
-}
-.slider img {
+.product-preview-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  border-radius: 8px;
-}
-.slider button {
-  position: absolute;
-  top: 45%;
-  transform: translateY(-50%);
-  background: #fff;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
-  padding: 5px 10px;
-  z-index: 5;
-}
-#prev-btn { left: 0; }
-#next-btn { right: 0; }
-
-.thumbnail-row {
+  height: 100%;
+  background-color: rgba(10, 10, 10, 0.6);
   display: flex;
-  gap: 10px;
-  margin-top: 10px;
-}
-.thumbnail {
-  width: 60px;
-  height: 60px;
-  object-fit: cover;
-  border-radius: 5px;
-  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  z-index: 1000;
+  overflow-y: auto; /* ✅ allow scroll inside overlay */
+  padding: 40px 20px; /* ✅ some padding for better mobile spacing */
 }
 
-.product-reviews {
-  margin-top: 40px;
+.product-preview-overlay.active {
+  display: flex;
 }
-.product-reviews h2 {
-  font-size: 1.5rem;
+
+.product-preview-content {
+  background: white;
+  border-radius: 12px;
+  display: flex;
+  max-width: 800px;
+  width: 90%;
+  padding: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  gap: 20px;
+  position: relative;
+  animation: fadeIn 0.3s ease-in-out;
+  max-height: 100%; /* ✅ constrain preview height */
+  overflow-y: auto;  /* ✅ enable scroll if content too tall */
 }
-.review {
-  background: #f6f6f6;
-  padding: 10px;
-  margin-bottom: 15px;
-  border-radius: 6px;
+
+.product-preview-content img {
+  width: 300px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
 }
-.review .stars {
-  color: #f9a825;
+
+.preview-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.close-preview {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 28px;
+  color: #444;
+  cursor: pointer;
+  z-index: 10;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .product-preview-content {
+    flex-direction: column;
+    align-items: center;
+    max-height: 90vh;
+  }
+
+  .product-preview-content img {
+    width: 90%;
+  }
 }

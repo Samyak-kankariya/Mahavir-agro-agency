@@ -47,66 +47,92 @@
       </header> 
 
     <!-- Fertilizer Products -->
-    <main class="products-page">
-        <h1>Fertilizers for Healthy Crop Growth</h1>
-        <h2>Our Fertilizer Range</h2>
-        <p>Explore our range of high-quality fertilizers that ensure healthy crop growth and better yields for farmers in Maharashtra.</p>
-        <div class="products-container">
-            <!-- Product 1 -->
-            <a href="product-details.html?id=urea" class="product-card">
-              <img src="assets/images/UREA_0.png" alt="Urea">
-              <h2>Urea</h2>
-              <p>Urea is a widely used nitrogen fertilizer that promotes healthy plant growth and improves yields.</p>
-            </a>           
-            <!-- Product 2 -->
-            <div class="product-card">
-                <img src="assets/images/DAP-18-46-0.jpg" alt="DAP">
-                <h2>Di-Ammonium Phosphate (DAP)</h2>
-                <p>DAP is a balanced fertilizer containing nitrogen and phosphorus, ideal for all types of crops.</p>
-            </div>
-            <!-- Product 3 -->
-            <div class="product-card">
-                <img src="assets/images/bharat_mop.jpg" alt="MOP">
-                <h2>Muriate of Potash (MOP)</h2>
-                <p>MOP improves the quality of fruits and vegetables by enhancing potassium levels.</p>
-            </div>
-            <!-- Product 1 -->
-            <div class="product-card">
-              <img src="assets/images/UREA_0.png" alt="Urea">
-              <h2>Urea</h2>
-              <p>Urea is a widely used nitrogen fertilizer that promotes healthy plant growth and improves yields.</p>
-          </div>
-          <!-- Product 2 -->
-          <div class="product-card">
-              <img src="assets/images/DAP-18-46-0.jpg" alt="DAP">
-              <h2>Di-Ammonium Phosphate (DAP)</h2>
-              <p>DAP is a balanced fertilizer containing nitrogen and phosphorus, ideal for all types of crops.</p>
-          </div>
-          <!-- Product 3 -->
-          <div class="product-card">
-              <img src="assets/images/bharat_mop.jpg" alt="MOP">
-              <h2>Muriate of Potash (MOP)</h2>
-              <p>MOP improves the quality of fruits and vegetables by enhancing potassium levels.</p>
-          </div>
-          <!-- Product 1 -->
-          <div class="product-card">
-            <img src="assets/images/UREA_0.png" alt="Urea">
-            <h2>Urea</h2>
-            <p>Urea is a widely used nitrogen fertilizer that promotes healthy plant growth and improves yields.</p>
+    <div class="products-container">
+      <!-- Product 1 -->
+      <div class="product-card" 
+           data-name="Urea"
+           data-image="assets/images/UREA_0.png"
+           data-description="High-quality nitrogen fertilizer for fast plant growth."
+           data-content="Nitrogen 46%"
+           data-price="950">
+        <img src="assets/images/UREA_0.png" alt="Urea Fertilizer">
+        <h2>Urea</h2>
+        <p>High Nitrogen Content</p>
+      </div>
+    
+      <!-- Product 2 -->
+      <div class="product-card"
+           data-name="Di-Ammonium Phosphate (DAP)"
+           data-image="assets/images/DAP-18-46-0.jpg"
+           data-description="Balanced fertilizer with nitrogen and phosphorus."
+           data-content="Nitrogen 18%, Phosphorus 46%"
+           data-price="1,200">
+        <img src="assets/images/DAP-18-46-0.jpg" alt="DAP">
+        <h2>Di-Ammonium Phosphate (DAP)</h2>
+        <p>Ideal for all types of crops.</p>
+      </div>
+    
+      <!-- Product 3 -->
+      <div class="product-card"
+           data-name="Muriate of Potash (MOP)"
+           data-image="assets/images/bharat_mop.jpg"
+           data-description="Enhances potassium levels for better fruit and vegetable quality."
+           data-content="Potassium 60%"
+           data-price="1,100">
+        <img src="assets/images/bharat_mop.jpg" alt="MOP">
+        <h2>Muriate of Potash (MOP)</h2>
+        <p>Improves fruit & vegetable quality.</p>
+      </div>
+    
+      <!-- Product 4 Duplicate (Urea again) -->
+      <div class="product-card"
+           data-name="Urea"
+           data-image="assets/images/UREA_0.png"
+           data-description="Widely used nitrogen fertilizer to boost yield."
+           data-content="Nitrogen 46%"
+           data-price="950">
+        <img src="assets/images/UREA_0.png" alt="Urea">
+        <h2>Urea</h2>
+        <p>Promotes healthy plant growth.</p>
+      </div>
+    
+      <!-- Product 5 Duplicate (DAP again) -->
+      <div class="product-card"
+           data-name="Di-Ammonium Phosphate (DAP)"
+           data-image="assets/images/DAP-18-46-0.jpg"
+           data-description="Supports root development and growth."
+           data-content="Nitrogen 18%, Phosphorus 46%"
+           data-price="1,200">
+        <img src="assets/images/DAP-18-46-0.jpg" alt="DAP">
+        <h2>Di-Ammonium Phosphate (DAP)</h2>
+        <p>Perfect for boosting early growth.</p>
+      </div>
+    
+      <!-- Product 6 Duplicate (MOP again) -->
+      <div class="product-card"
+           data-name="Muriate of Potash (MOP)"
+           data-image="assets/images/bharat_mop.jpg"
+           data-description="Increases resistance to disease and drought."
+           data-content="Potassium 60%"
+           data-price="1,100">
+        <img src="assets/images/bharat_mop.jpg" alt="MOP">
+        <h2>Muriate of Potash (MOP)</h2>
+        <p>Enhances crop resilience and quality.</p>
+      </div>
+    </div>
+    <!-- Hover Preview -->
+    <div id="preview-overlay" class="product-preview-overlay">
+      <div id="preview" class="product-preview-content">
+        <span id="preview-close" class="close-preview">&times;</span>
+        <img id="preview-img" src="" alt="Product Image" />
+        <div class="preview-details">
+          <h2 id="preview-name"></h2>
+          <p id="preview-description"></p>
+          <p><strong>Content:</strong> <span id="preview-content"></span></p>
+          <p><strong>Price:</strong> ₹<span id="preview-price"></span></p>
         </div>
-        <!-- Product 2 -->
-        <div class="product-card">
-            <img src="assets/images/DAP-18-46-0.jpg" alt="DAP">
-            <h2>Di-Ammonium Phosphate (DAP)</h2>
-            <p>DAP is a balanced fertilizer containing nitrogen and phosphorus, ideal for all types of crops.</p>
-        </div>
-        <!-- Product 3 -->
-        <div class="product-card">
-            <img src="assets/images/bharat_mop.jpg" alt="MOP">
-            <h2>Muriate of Potash (MOP)</h2>
-            <p>MOP improves the quality of fruits and vegetables by enhancing potassium levels.</p>
-        </div>
-        </div>
+      </div>
+    </div>      
     </main>
 
     <footer class="site-footer" role="contentinfo">
@@ -147,6 +173,7 @@
         <p>&copy; 2025 Mahavir Agro Agency Rahata. All rights reserved.</p>
       </div>
     </footer>
+    
     <script src="js/main.js" type="module" defer></script>
   </body>
 </html>
